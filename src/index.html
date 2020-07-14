@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tic Tac Toe</title>
+  <link rel="icon" href="./favicon.svg">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  
+  <header class="header">
+    <div class="btns-wrapper player-btns-wrapper">
+      <button class="btn player-btn" data-player="1">1 Игрок</button>
+
+      <button class="btn player-btn" data-player="2">2 Игрока</button>
+    </div>
+
+    <div class="btns-wrapper symbol-btns-wrapper">
+      <button class="btn symbol-btn" data-symbol="X">
+        <svg class="btn-icon" viewBox="0 0 128 128">
+          <path class="btn-icon-path" d="M16,16L112,112"></path>
+          <path class="btn-icon-path" d="M112,16L16,112"></path>
+        </svg>
+      </button>
+
+      <button class="btn symbol-btn" data-symbol="0">
+        <svg class="btn-icon" viewBox="0 0 128 128">
+          <path class="btn-icon-path" d="M64,16A48,48 0 1,0 64,112A48,48 0 1,0 64,16"></path>
+        </svg>
+      </button>
+    </div>
+
+    <div class="subtitle" id="hint">Выберите количество игроков</div>
+  </header>
+  
+  <section class="game">
+    <table class="container"></table>
+  </section>
+
+  <footer class="footer">
+    <button class="btn reset-btn">Reset</button>
+  </footer>
+
+  <div class="overlay finish-modal-overlay">
+    
+    <div class="modal">
+      <div class="modal-header">
+        <p>Finish</p>
+        <svg class="modal-close-btn" viewBox="0 0 128 128">
+          <path class="modal-close-btn-path" d="M16,16L112,112"></path>
+          <path class="modal-close-btn-path" d="M112,16L16,112"></path>
+        </svg>
+      </div>
+      <div class="modal-content">
+        <div class="result"></div>
+        <p>Winner</p>
+
+        <button class="finish-btn">Next</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/dl-animate"></script>
+  <script src="js/index.js"></script>
+</body>
+</html>
